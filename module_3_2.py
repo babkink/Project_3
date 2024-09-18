@@ -1,4 +1,4 @@
-def send_email(message, recipient, sender = 'university.help@gmail.com'):
+def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
     recipient_ending = False
     sender_ending = False
     endings = ['.com', '.net', '.ru']
