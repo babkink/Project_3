@@ -3,11 +3,11 @@ def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
     sender_ending = False
     endings = ['.com', '.net', '.ru']
     for i in endings:
-        if i in recipient:
+        if recipient.endswith(i) == True:
             recipient_ending = True
             break
     for i in endings:
-        if i in sender:
+        if sender.endswith(i) == True:
             sender_ending = True
             break
     if sender == recipient:
@@ -21,4 +21,4 @@ def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
         print(f'Невозможно отправить письмо с адреса <{sender}> на адрес <{recipient}>"')
 
 
-send_email('Hello', 'babkink@yandex.ru')
+send_email('Hello', 'babkink@yandex.ru', sender='egor@ya.ru')
